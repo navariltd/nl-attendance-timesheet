@@ -7,8 +7,9 @@ This app includes functionalities to calculate and create timesheets from attend
 
 In addition, the app includes customizations for calculating daily payouts and subsequently weekly/periodic salary structure assignments for piece rate work.
 
-## Creating Timesheets from Employee Attendance
 ---
+## Creating Timesheets from Employee Attendance
+
 **Overtime is marked in two scenarios:**
 1. Additional time (more than 30 minutes in an attendance record) past an employee's shift end time. (Overtime 1.5)
 2. An attendance created on a day that is also on an employee's holiday list. (overtime 2.0)
@@ -84,6 +85,7 @@ See salary structure below:
 See how the hours from the above screenshots reflect on earnings and deductions:
 ![Screenshot from 2024-05-17 22-49-36](https://github.com/navariltd/navari_csf_ke/assets/60260520/1d0c770f-de32-451c-b1e8-704330bfe398)
 
+---
 ## Casual Payroll Customization
 The Casual Payroll System streamlines the management of casual workers' payments by providing tools for setting up activity types and linking them to specific items/products. It includes functionalities for daily attendance logging, calculating daily payouts based on attended activities, and assigning salary structures for specified timeframes. With automated rate fetching and payout calculations, this system ensures accurate and efficient payroll processing for casual workers.
 ### 1. Set-Up
