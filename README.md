@@ -3,7 +3,7 @@ Frappe App to calculate and create timesheets from attendance records
 
 ## Introduction
 
-This app includes functionalities to calculate and create timesheets from attendance records. The timeseets are created based on any hours above normal working hours, recorded in attendance.
+This app includes functionalities to calculate and create timesheets from attendance records. The timesheets are created based on any hours above normal working hours, recorded in attendance.
 
 ---
 ## Key Features
@@ -155,7 +155,7 @@ After adding the app to your bench, the next step is to install it onto the spec
 
 3. **Install the App:**
    - Go to the Apps tab of the site and click the **Install App** button. Selecting this option will present you with a list of apps available to install.
-   - Find `Navari VF` in the list and proceed with the installation.
+   - Find `Nl Attendance Timesheet` in the list and proceed with the installation.
 
 ### Verification and Use
 
