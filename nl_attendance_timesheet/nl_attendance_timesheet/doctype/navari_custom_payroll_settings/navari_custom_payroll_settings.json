@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-15 13:27:20.418452",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maximum_monthly_hours",
+  "overtime_15_activity",
+  "overtime_20_activity",
+  "column_break_xpqok",
+  "include_early_entry",
+  "earned_bonus_vs_attained_score_matrix_section",
+  "bonus_vs_score_matrix"
+ ],
+ "fields": [
+  {
+   "description": "Hours beyond which will be carried over to overtime 1.5",
+   "fieldname": "maximum_monthly_hours",
+   "fieldtype": "Float",
+   "label": "Maximum monthly hours"
+  },
+  {
+   "description": "Activity type used to create overtime 1.5 timesheets",
+   "fieldname": "overtime_15_activity",
+   "fieldtype": "Link",
+   "label": "Overtime 1.5 Activity",
+   "options": "Activity Type"
+  },
+  {
+   "description": "Activity type used to create overtime 2.0 timesheets",
+   "fieldname": "overtime_20_activity",
+   "fieldtype": "Link",
+   "label": "Overtime 2.0 Activity",
+   "options": "Activity Type"
+  },
+  {
+   "fieldname": "column_break_xpqok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "If checked, hours before shift start time will be considered while making salary slips.",
+   "fieldname": "include_early_entry",
+   "fieldtype": "Check",
+   "label": "Include early entry"
+  },
+  {
+   "fieldname": "earned_bonus_vs_attained_score_matrix_section",
+   "fieldtype": "Section Break",
+   "label": "Earned Bonus Vs Attained Score Matrix"
+  },
+  {
+   "fieldname": "bonus_vs_score_matrix",
+   "fieldtype": "Table",
+   "label": "Bonus vs Score Matrix",
+   "options": "Earned Bonus vs Attained Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-17 09:00:24.479077",
+ "modified_by": "Administrator",
+ "module": "CSF KE",
+ "name": "Navari Custom Payroll Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
