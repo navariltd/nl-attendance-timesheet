@@ -1,4 +1,4 @@
-# Attendance <-> Timesheet
+# Attendance and Timesheet
 Frappe App to calculate and create timesheets from attendance records
 
 ## Introduction
