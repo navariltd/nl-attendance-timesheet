@@ -1,4 +1,4 @@
-# Attendance <-> Timesheet
+# Attendance and Timesheet Integration
 Frappe App to calculate and create timesheets from attendance records
 
 ## Introduction
@@ -74,14 +74,14 @@ With Attendance based payroll, there are a few more steps while generating salar
 *6. Holiday hours:* Sum of hours from *Overtime 2.0* table.<br>
 *7. Hourly Rate:* Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
 See salary structure below:
-![Screenshot from 2024-05-17 22-34-31](https://github.com/navariltd/navari_csf_ke/assets/60260520/fcc6c265-efb6-425e-9c26-ddb0a348c55b)
+![Screenshot from 2024-05-17 22-34-31](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/fcc6c265-efb6-425e-9c26-ddb0a348c55b)
 
 ```Basic salary = (hourly_rate * regular_working_hours)``` <br>
 ```OT hours = hourly_rate * 1.5 * overtime_hours``` <br>
 ```Holiday Hours = hourly_rate * 2 * holiday_hours```<br>
 *NB: OT here refers to regular overtime*<br>
 See how the hours from the above screenshots reflect on earnings and deductions:
-![Screenshot from 2024-05-17 22-49-36](https://github.com/navariltd/navari_csf_ke/assets/60260520/1d0c770f-de32-451c-b1e8-704330bfe398)
+![Screenshot from 2024-05-17 22-49-36](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/1d0c770f-de32-451c-b1e8-704330bfe398)
 
     
 ## Installation
@@ -94,7 +94,7 @@ See how the hours from the above screenshots reflect on earnings and deductions:
         $ bench get-app --branch {branch-name} git@github.com:navariltd/nl-attendance-timesheet.git
     ```
     Replace <i>{branch-name}</i> with any of the repository's branches
-5. After that, you can install the navari_vf app on the required site by running 
+5. After that, you can install the nl-attendance-timesheet app on the required site by running 
     ```sh
         $ bench --site {sitename} install-app nl-attendance-timesheet
     ```
@@ -128,7 +128,7 @@ After adding the app to your bench, the next step is to install it onto the spec
 
 3. **Install the App:**
    - Go to the Apps tab of the site and click the **Install App** button. Selecting this option will present you with a list of apps available to install.
-   - Find `Navari VF` in the list and proceed with the installation.
+   - Find `nl-attendance-timesheet` in the list and proceed with the installation.
 
 ### Verification and Use
 
