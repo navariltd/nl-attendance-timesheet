@@ -97,14 +97,12 @@ This doctype includes settings related to payroll:
 2. When running payroll on payroll entry, after generating salary slips, attendance data is fetched and added to employees attendance in the salary slips. Attendance data will be picked from [attendance](https://frappehr.com/docs/v14/en/attendance) and timesheet records generated over that payroll period.
 3. Attendance data will be added to the *Attendance Details* tab on a salary slip.
 
-<br> 
-
-1. **Attendance:** Picked from an employee's attendance records over that payroll period<br>
+4. **Attendance:** Picked from an employee's attendance records over that payroll period<br>
    - **Payment Hours** - this is a custom field in attendance doctype which accurately captures total shift hours, excluding unpaid breaks if any and overtime. It is captured as billable hours in Attendance Details in Salary Slip.<br>
-2. **Regular Working Hours:** Sum of **Billiable Hours** from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *Navari Custom Payroll Settings* are carried over to the *Overtime Hours* field.<br>
-3. **Overtime Hours:** Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
-4. **Holiday hours:** Sum of hours from *Overtime 2.0* table.<br>
-5. **Hourly Rate:** Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
+5. **Regular Working Hours:** Sum of *Billiable Hours* from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *Navari Custom Payroll Settings* are carried over to the *Overtime Hours* field.<br>
+6. **Overtime Hours:** Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
+7. **Holiday hours:** Sum of hours from *Overtime 2.0* table.<br>
+8. **Hourly Rate:** Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
 ```Basic salary = (hourly_rate * regular_working_hours)``` <br>
 ```OT hours = hourly_rate * 1.5 * overtime_hours``` <br>
 ```Holiday Hours = hourly_rate * 2 * holiday_hours```<br>
