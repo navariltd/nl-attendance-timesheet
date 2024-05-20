@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+nl_attendance_timesheet/docs/current
+node_modules/
