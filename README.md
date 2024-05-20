@@ -95,16 +95,15 @@ This doctype includes settings related to payroll:
 ***Few changes to the payroll process:***
 1. When creating a salary structure for employees who are paid per hour, make sure to check the *Wage based salary (hours)* field, and fill the *Hour Rate* and *Salary Component* fields.
 2. When running payroll on payroll entry, after generating salary slips, attendance data is fetched and added to employees attendance in the salary slips. Attendance data will be picked from [attendance](https://frappehr.com/docs/v14/en/attendance) and timesheet records generated over that payroll period.
+![Attendance Details Tab](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/885be677-0406-4496-8691-894a97cb5f3d)
+
 3. Attendance data will be added to the *Attendance Details* tab on a salary slip.
+![Worked Hours Summary Section](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/80c468ba-4b44-48a4-ac6d-63deaf5fae86)
 
-<br> 
-
-1. **Attendance:** Picked from an employee's attendance records over that payroll period<br>
-   - **Payment Hours** - this is a custom field in attendance doctype which accurately captures total shift hours, excluding unpaid breaks if any and overtime. It is captured as billable hours in Attendance Details in Salary Slip.<br>
-2. **Regular Working Hours:** Sum of **Billiable Hours** from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *Navari Custom Payroll Settings* are carried over to the *Overtime Hours* field.<br>
-3. **Overtime Hours:** Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
-4. **Holiday hours:** Sum of hours from *Overtime 2.0* table.<br>
-5. **Hourly Rate:** Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
+4. **Regular Working Hours:** Sum of *Billiable Hours* from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *Navari Custom Payroll Settings* are carried over to the *Overtime Hours* field.<br>
+5. **Overtime Hours:** Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
+6. **Holiday hours:** Sum of hours from *Overtime 2.0* table.<br>
+7. **Hourly Rate:** Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
 ```Basic salary = (hourly_rate * regular_working_hours)``` <br>
 ```OT hours = hourly_rate * 1.5 * overtime_hours``` <br>
 ```Holiday Hours = hourly_rate * 2 * holiday_hours```<br>
