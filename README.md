@@ -1,9 +1,9 @@
-# Attendance and Timesheet
+# Attendance and Timesheet Integration
 Frappe App to calculate and create timesheets from attendance records
 
 ## Introduction
 
-This app includes functionalities to calculate and create timesheets from attendance records. The timeseets are created based on any hours above normal working hours, recorded in attendance.
+This app includes functionalities to calculate and create timesheets from attendance records. The timesheets are created based on any hours above normal working hours, recorded in attendance.
 
 ---
 ## Key Features
@@ -97,16 +97,14 @@ This doctype includes settings related to payroll:
 2. When running payroll on payroll entry, after generating salary slips, attendance data is fetched and added to employees attendance in the salary slips. Attendance data will be picked from [attendance](https://frappehr.com/docs/v14/en/attendance) and timesheet records generated over that payroll period.
 3. Attendance data will be added to the *Attendance Details* tab on a salary slip.
 
-<br>
-*1. Attendance:* Picked from an employee's attendance records over that payroll period<br>
-> *Payment Hours* - this is a custom field in attendance doctype which accurately captures total shift hours, excluding unpaid breaks if any and overtime. It is captured as billable hours in Attendance Details in Salary Slip.<br>
+<br> 
 
-*2. Overtime 1.5:* Picked from timesheet records, timesheets with the activity type set as *Overtime 1.5 Activity* on *VF Payroll Settings*<br>
-*3. Overtime 2.0:* Picked from timesheet records, timesheets with the activity type set as *Overtime 2.0 Activity* on *VF Payroll Settings*<br>
-*4. Regular Working Hours:* Sum of *Billiable Hours* from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *VF Payroll Settings* are carried over to the *Overtime Hours* field.<br>
-*5. Overtime Hours:* Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
-*6. Holiday hours:* Sum of hours from *Overtime 2.0* table.<br>
-*7. Hourly Rate:* Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
+1. **Attendance:** Picked from an employee's attendance records over that payroll period<br>
+   - **Payment Hours** - this is a custom field in attendance doctype which accurately captures total shift hours, excluding unpaid breaks if any and overtime. It is captured as billable hours in Attendance Details in Salary Slip.<br>
+2. **Regular Working Hours:** Sum of **Billiable Hours** from the *Attendance* table. Hours beyond what is set as *Maximum monthly hours* on *Navari Custom Payroll Settings* are carried over to the *Overtime Hours* field.<br>
+3. **Overtime Hours:** Sum of hours from *Overtime 1.5* table plus what has been carried over from *Regular Working Hours*, incase there is anything to carry over.<br>
+4. **Holiday hours:** Sum of hours from *Overtime 2.0* table.<br>
+5. **Hourly Rate:** Fetched from the salary structure assigned to an employee. Used to calculate basic and overtime pay (Both regular and holiday overtime)<br>
 ```Basic salary = (hourly_rate * regular_working_hours)``` <br>
 ```OT hours = hourly_rate * 1.5 * overtime_hours``` <br>
 ```Holiday Hours = hourly_rate * 2 * holiday_hours```<br>
@@ -157,7 +155,7 @@ After adding the app to your bench, the next step is to install it onto the spec
 
 3. **Install the App:**
    - Go to the Apps tab of the site and click the **Install App** button. Selecting this option will present you with a list of apps available to install.
-   - Find `Navari VF` in the list and proceed with the installation.
+   - Find `Nl Attendance Timesheet` in the list and proceed with the installation.
 
 ### Verification and Use
 
