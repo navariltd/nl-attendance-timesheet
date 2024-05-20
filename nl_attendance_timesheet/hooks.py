@@ -1,8 +1,8 @@
 app_name = "nl_attendance_timesheet"
 app_title = "Nl Attendance Timesheet"
 app_publisher = "Navari Ltd"
-app_description = "Navari Attendance Timesheet"
-app_email = "cheptoek@navari.co.ke"
+app_description = "Create timesheets from attendance records"
+app_email = "support@navari.co.ke"
 app_license = "MIT"
 
 # Includes in <head>
