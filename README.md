@@ -75,21 +75,24 @@ This doctype includes settings related to payroll:
 
 ### Steps
 
-1. **Create an Employee**: Ensure each employee is properly set up in the system.
-2. **Create Salary Components**: Define the various salary components such as basic salary, allowances, and deductions.
-3. **Create a Salary Structure**: Develop a salary structure that includes all salary components.
-4. **Create a Salary Structure Assignment**: Assign the salary structure to each employee.
-5. **Create a Payroll Entry**: Generate payroll entries for each payroll period.
-6. **Generate Salary Slips**: Create salary slips for each employee, incorporating attendance and overtime data.
+1. **Create an [Employee](https://frappehr.com/docs/v14/en/employee)**: Ensure each employee is properly set up in the system.
+2. **Create [Salary Components](https://frappehr.com/docs/v14/en/salary-component)**: Define the various salary components such as basic salary, allowances, and deductions.
+3. **Create a [Salary Structure](https://frappehr.com/docs/v14/en/salary-structure)**: Develop a salary structure that includes all salary components.
+4. **Create a [Salary Structure Assignment](https://frappehr.com/docs/v14/en/salary-structure-assignment)**: Assign the salary structure to each employee.
+5. **Create a [Payroll Entry](https://frappehr.com/docs/v14/en/payroll-entry)**: Generate payroll entries for each payroll period.
+6. **Generate [Salary Slips](https://frappehr.com/docs/v14/en/salary-slip)**: Create salary slips for each employee, incorporating attendance and overtime data.
 
 ## Payroll Generation
 
 ### Steps for Payroll Generation
 
-1. **Attendance Data**: Ensure that attendance data is accurately logged and verified in the Attendance doctype.
+1. **Attendance Data**: Ensure that attendance data is accurately logged and verified in the [Attendance](https://frappehr.com/docs/v14/en/attendance) doctype.
 2. **Generate Overtime Timesheets**: Automatically or manually generate timesheets for overtime using the Timesheet Center for the specified payroll period.
+![Timesheet Center](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/908523fc-7961-4064-916d-55e65adbd649)
 3. **Submit Timesheets**: Submit timesheets to ensure they are included in payroll calculations.
+![Submitted Timesheet](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/72ddcc6d-e028-4b4b-b5d3-d65131c574b4)
 4. **Create Payroll Entry**: Create a payroll entry for the desired payroll period.
+![Payroll Entry](https://github.com/navariltd/nl-attendance-timesheet/assets/60260520/8feb26ea-d3f3-426b-bd12-075a27dc2625)
 5. **Generate Salary Slips**: Generate salary slips, which will incorporate attendance and timesheet records under the attendance tab in the salary slip, ensuring accurate calculation of regular and overtime pay.
 
 ***Few changes to the payroll process:***
