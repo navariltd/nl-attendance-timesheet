@@ -120,12 +120,12 @@ This doctype includes settings related to payroll:
 3. [Install Frappe HR](https://github.com/frappe/hrms)
 4. Once bench, ERPNext and Frappe HR are installed, add navari_vf to your bench by running
     ```sh
-        $ bench get-app --branch {branch-name} git@github.com:navariltd/nl-attendance-timesheet.git
+        $ bench get-app https://github.com/navariltd/nl-attendance-timesheet.git
     ```
     Replace <i>{branch-name}</i> with any of the repository's branches
 5. After that, you can install the navari_vf app on the required site by running 
     ```sh
-        $ bench --site {sitename} install-app nl-attendance-timesheet
+        $ bench --site {sitename} install-app nl_attendance_timesheet
     ```
     Replace <i>{sitename}</i> with the name of your site
 
