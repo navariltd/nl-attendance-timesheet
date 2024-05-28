@@ -30,7 +30,7 @@ This app includes functionalities to calculate and create timesheets from attend
 
 Each employee should have an Attendance ID mapped to the biometric/RFID devices' user IDs. Devices send check-in/out logs to the Employee Checkin doctype. 
 
-There's a need for Checkin/Checkout logs, mostly fetched from a biometric system (e.g. https://github.com/navariltd/navari-frappehr-biostar) created under [employee checkin](https://frappehr.com/docs/v14/en/employee_checkin), after every hour.
+There's a need for Checkin/Checkout logs, mostly fetched from a biometric system (e.g. https://github.com/navariltd/navari-frappehr-biostar) created under [employee checkin](https://frappehr.com/docs/v14/en/employee_checkin), every day.
 
 
 ### Attendance
