@@ -1,9 +1,9 @@
 app_name = "nl_attendance_timesheet"
-app_title = "Nl Attendance Timesheet"
+app_title = "FrappeHR Attendance and Timesheet Integration"
 app_publisher = "Navari Ltd"
-app_description = "Create timesheets from attendance records"
+app_description = "FrappeHR dependent app to create employee timesheets from attendance records"
 app_email = "support@navari.co.ke"
-app_license = "MIT"
+app_license = "GNU Affero General Public License v3.0"
 
 # Includes in <head>
 # ------------------
