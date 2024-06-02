@@ -4,7 +4,7 @@ app_publisher = "Navari Ltd"
 app_description = "FrappeHR app to automate creation of employee timesheets from attendance records"
 app_email = "support@navari.co.ke"
 app_license = "GNU Affero General Public License v3.0"
-required_apps = ["frappe/erpnext/hrms"]
+required_apps = ["frappe/erpnext"]
 
 # Includes in <head>
 # ------------------
