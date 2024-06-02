@@ -10,7 +10,7 @@ def execute():
                 "fieldtype": "Float",
                 "label": "Overtime Threshold",
                 "insert_after": "include_early_entry",
-                "default": 30.0
+                "default": "30.0"
             }
         ]
     }
@@ -21,7 +21,7 @@ def execute():
         "doctype": "Navari Custom Payroll Settings",
         "doctype_or_field": "Singles",
         "fieldname": "overtime_threshold",
-        "value": 30.0
+        "value": "30.0"
     })
     singles_entry.insert()
 
