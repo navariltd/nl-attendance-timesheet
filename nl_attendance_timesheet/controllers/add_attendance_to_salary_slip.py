@@ -72,8 +72,6 @@ def add_attendance_data(payroll_entry):
         if salary_slip.regular_working_hours > maximum_monthly_hours:
             salary_slip.overtime_hours += salary_slip.regular_working_hours - maximum_monthly_hours
             salary_slip.regular_working_hours = maximum_monthly_hours
-            # frappe.throw(str(salary_slip.regular_working_hours))
-            # frappe.publish_realtime("msgprint", f'salary slip {salary_slip.regular_working_hours}', user=frappe.session.user,)
         elif salary_slip.regular_working_hours < maximum_monthly_hours:
             balance_to_maximum_monthly_hours = maximum_monthly_hours - salary_slip.regular_working_hours
             if salary_slip.overtime_hours <= balance_to_maximum_monthly_hours:
