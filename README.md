@@ -3,7 +3,7 @@ Frappe App to calculate and create timesheets from attendance records
 
 ## Introduction
 
-This app includes functionalities to calculate and create timesheets from attendance records. The timesheets are created based on any hours above normal working hours, recorded in attendance.
+This app includes functionalities to calculate and create timesheets from attendance records. Timesheets are created based on any hours above normal working hours, recorded in attendance.
 
 ---
 ## Key Features
