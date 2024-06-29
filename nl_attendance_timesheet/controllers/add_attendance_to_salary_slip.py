@@ -51,6 +51,7 @@ def add_attendance_data(payroll_entry):
                     })
 
                     salary_slip.regular_working_hours += billiable_hours
+        
 
         if overtime_attendance:
             for overtime_attendance_record in overtime_attendance:
@@ -67,7 +68,7 @@ def add_attendance_data(payroll_entry):
                         'hours': overtime_attendance_record.get('total_hours')
                     })
                     salary_slip.holiday_hours += overtime_attendance_record.get('total_hours')
-
+        
         if salary_slip.regular_working_hours > maximum_monthly_hours:
             salary_slip.overtime_hours += salary_slip.regular_working_hours - maximum_monthly_hours
             salary_slip.regular_working_hours = maximum_monthly_hours
@@ -85,6 +86,7 @@ def add_attendance_data(payroll_entry):
         if salary_slip.attendance or salary_slip.regular_overtime or salary_slip.holiday_overtime:
             salary_slip.save(ignore_permissions=True)
             frappe.db.commit()
+        
 
 def get_holiday_dates(employee):
     holiday_list = frappe.db.get_value('Employee', employee, 'holiday_list')
