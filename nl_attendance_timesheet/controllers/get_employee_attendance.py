@@ -33,7 +33,7 @@ def get_employee_attendance(employee_id, start_date, end_date):
             attendance.in_time.as_("in_time"),
             attendance.working_hours.as_("working_hours"),
             attendance.payment_hours.as_("payment_hours"),
-            # attendance.overtime.as_("overtime"),
+            attendance.overtime.as_("overtime"),
             employee.holiday_list.as_("holiday_list"),
             shift_type.include_unpaid_breaks.as_("include_unpaid_breaks"),
             shift_type.unpaid_breaks_minutes.as_("unpaid_breaks_minutes"),
