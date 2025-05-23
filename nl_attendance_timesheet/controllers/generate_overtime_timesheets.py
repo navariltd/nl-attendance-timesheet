@@ -12,6 +12,7 @@ def generate_overtime_timesheets(start_date=current_date, end_date=current_date)
     SETTINGS_DOCTYPE = "Navari Custom Payroll Settings"
     overtime_15 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_15_activity")
     overtime_20 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_20_activity")
+    company = frappe.db.get_single_value(SETTINGS_DOCTYPE, "company")
 
     if not overtime_15 or not overtime_20:
         frappe.throw(
@@ -25,6 +26,7 @@ def generate_overtime_timesheets(start_date=current_date, end_date=current_date)
     conditions = [
         attendance.docstatus == 1,
         attendance.status == "Present",
+        attendance.company == company,
         attendance.attendance_date[start_date:end_date],
     ]
 
