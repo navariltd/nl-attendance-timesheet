@@ -8,7 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "start_date",
-  "end_date"
+  "end_date",
+  "column_break_dgqm",
+  "company"
  ],
  "fields": [
   {
@@ -24,12 +26,23 @@
    "in_list_view": 1,
    "label": "End Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dgqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-05-17 09:00:38.846138",
+ "modified": "2025-05-23 10:57:15.152723",
  "modified_by": "Administrator",
  "module": "Nl Attendance Timesheet",
  "name": "Timesheet Center",
@@ -46,6 +59,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

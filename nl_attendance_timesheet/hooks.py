@@ -9,6 +9,22 @@ required_apps = ["frappe/erpnext"]
 # Includes in <head>
 # ------------------
 
+# fixtures = [
+#     {
+#         "doctype": "Custom Field",
+#         "filters": [
+#             [
+#                 "name",
+#                 "in",
+#                 (
+#                     "Shift Type-custom_unpaid_breaksminutes",
+                   
+#                 ),
+#             ]
+#         ],
+#     }
+# ]
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/nl_attendance_timesheet/css/nl_attendance_timesheet.css"
 # app_include_js = "/assets/nl_attendance_timesheet/js/nl_attendance_timesheet.js"
