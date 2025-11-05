@@ -14,10 +14,9 @@ overtime_15 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_15_activity
 overtime_20 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_20_activity")
 
 
-@frappe.whitelist()
-def add_attendance_data(payroll_entry):
+def add_attendance_data(doc, method=None):
     salary_slips = frappe.db.get_all(
-        "Salary Slip", filters={"payroll_entry": payroll_entry, "docstatus": 0}
+        "Salary Slip", filters={"payroll_entry": doc.name, "docstatus": 0}
     )
 
     for entry in salary_slips:
@@ -108,21 +107,24 @@ def add_attendance_data(payroll_entry):
                         "total_hours"
                     )
 
-        if salary_slip.regular_working_hours > maximum_monthly_hours:
-            salary_slip.overtime_hours += (
-                salary_slip.regular_working_hours - maximum_monthly_hours
-            )
-            salary_slip.regular_working_hours = maximum_monthly_hours
-        elif salary_slip.regular_working_hours < maximum_monthly_hours:
-            balance_to_maximum_monthly_hours = (
-                maximum_monthly_hours - salary_slip.regular_working_hours
-            )
-            if salary_slip.overtime_hours <= balance_to_maximum_monthly_hours:
-                salary_slip.regular_working_hours += salary_slip.overtime_hours
+        regular_hours = float(salary_slip.regular_working_hours)
+        overtime_hours = float(salary_slip.overtime_hours)
+        max_hours = float(maximum_monthly_hours)
+
+        if regular_hours > max_hours:
+            excess = regular_hours - max_hours
+            salary_slip.overtime_hours = overtime_hours + excess
+            salary_slip.regular_working_hours = max_hours
+
+        elif regular_hours < max_hours:
+            balance_to_max = max_hours - regular_hours
+
+            if overtime_hours <= balance_to_max:
+                salary_slip.regular_working_hours = regular_hours + overtime_hours
                 salary_slip.overtime_hours = 0
             else:
-                salary_slip.overtime_hours -= balance_to_maximum_monthly_hours
-                salary_slip.regular_working_hours += balance_to_maximum_monthly_hours
+                salary_slip.regular_working_hours = max_hours
+                salary_slip.overtime_hours = overtime_hours - balance_to_max
 
         if (
             salary_slip.attendance
