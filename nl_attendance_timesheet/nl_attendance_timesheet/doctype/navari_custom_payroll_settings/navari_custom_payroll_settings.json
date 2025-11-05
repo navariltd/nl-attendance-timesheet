@@ -12,6 +12,7 @@
   "overtime_20_activity",
   "column_break_xpqok",
   "include_early_entry",
+  "overtime_threshold",
   "earned_bonus_vs_attained_score_matrix_section",
   "bonus_vs_score_matrix"
  ],
@@ -57,12 +58,19 @@
    "fieldtype": "Table",
    "label": "Bonus vs Score Matrix",
    "options": "Earned Bonus vs Attained Score"
+  },
+  {
+   "default": "30",
+   "fieldname": "overtime_threshold",
+   "fieldtype": "Float",
+   "label": "Overtime Threshold"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-05-17 09:00:24.479077",
+ "modified": "2025-11-05 12:16:30.955718",
  "modified_by": "Administrator",
  "module": "Nl Attendance Timesheet",
  "name": "Navari Custom Payroll Settings",
@@ -79,6 +87,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
