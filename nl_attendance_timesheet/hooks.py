@@ -1,10 +1,21 @@
 app_name = "nl_attendance_timesheet"
 app_title = "Attendance and Timesheet"
 app_publisher = "Navari Ltd"
-app_description = "FrappeHR app to automate creation of employee timesheets from attendance records"
+app_description = (
+    "FrappeHR app to automate creation of employee timesheets from attendance records"
+)
 app_email = "support@navari.co.ke"
 app_license = "GNU Affero General Public License v3.0"
 required_apps = ["frappe/erpnext"]
+
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["module", "=", "Nl Attendance Timesheet"],
+        ],
+    },
+]
 
 # Includes in <head>
 # ------------------
@@ -29,7 +40,8 @@ required_apps = ["frappe/erpnext"]
 
 # include js in doctype views
 doctype_js = {
- "Payroll Entry" : "public/js/payroll_entry.js",}
+    "Payroll Entry": "public/js/payroll_entry.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
