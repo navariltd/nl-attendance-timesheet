@@ -14,9 +14,10 @@ overtime_15 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_15_activity
 overtime_20 = frappe.db.get_single_value(SETTINGS_DOCTYPE, "overtime_20_activity")
 
 
-def add_attendance_data(doc, method=None):
+@frappe.whitelist()
+def add_attendance_data(payroll_entry):
     salary_slips = frappe.db.get_all(
-        "Salary Slip", filters={"payroll_entry": doc.name, "docstatus": 0}
+        "Salary Slip", filters={"payroll_entry": payroll_entry, "docstatus": 0}
     )
 
     for entry in salary_slips:
@@ -133,6 +134,10 @@ def add_attendance_data(doc, method=None):
         ):
             salary_slip.save(ignore_permissions=True)
             frappe.db.commit()
+
+    frappe.response["message"] = _(
+        "Attendance and Overtime added to Salary Slips successfully."
+    )
 
 
 def get_holiday_dates(employee):
