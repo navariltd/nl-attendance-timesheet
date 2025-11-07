@@ -130,11 +130,11 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-    "Payroll Entry": {
-        "on_submit": "nl_attendance_timesheet.controllers.add_attendance_to_salary_slip.add_attendance_data",
-    }
-}
+# doc_events = {
+#     "Payroll Entry": {
+#         "on_submit": "nl_attendance_timesheet.controllers.add_attendance_to_salary_slip.add_attendance_data",
+#     }
+# }
 
 # Scheduled Tasks
 # ---------------
